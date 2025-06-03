@@ -55,7 +55,8 @@ function updatePagination() {
 function searchCards() {
     const query = normalizeString(document.getElementById('searchBar').value);
     filteredWebsites = websites.filter(website =>
-        normalizeString(website.title).includes(query)
+        normalizeString(website.title).includes(query) ||
+        normalizeString(website.desc).includes(query)
     );
     currentPage = 1;
     displayCards(currentPage);
