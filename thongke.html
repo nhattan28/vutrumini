@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống Kê Lượt Truy Cập</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Thống Kê Lượt Truy Cập</h1>
+        <nav>
+            <a href="index.html">Website</a>
+            <a href="tienich.html">Tiện Ích</a>
+        </nav>
+    </header>
+    <main>
+        <section class="visitor-counter">
+            <h2>Lượt truy cập</h2>
+            <p>Ngày: <span id="dailyCount">0</span></p>
+            <p>Tuần: <span id="weeklyCount">0</span></p>
+            <p>Tháng: <span id="monthlyCount">0</span></p>
+            <p>Năm: <span id="yearlyCount">0</span></p>
+        </section>
+    </main>
+    <footer>
+        <p>Made with ❤️ by Nhật Tân • © 2025</p>
+    </footer>
+    <script>
+        function updateVisitorCount() {
+            const counts = {
+                daily: parseInt(localStorage.getItem('dailyCount') || '0') + 1,
+                weekly: parseInt(localStorage.getItem('weeklyCount') || '0') + 1,
+                monthly: parseInt(localStorage.getItem('monthlyCount') || '0') + 1,
+                yearly: parseInt(localStorage.getItem('yearlyCount') || '0') + 1
+            };
+
+            localStorage.setItem('dailyCount', counts.daily);
+            localStorage.setItem('weeklyCount', counts.weekly);
+            localStorage.setItem('monthlyCount', counts.monthly);
+            localStorage.setItem('yearlyCount', counts.yearly);
+
+            document.getElementById('dailyCount').textContent = counts.daily;
+            document.getElementById('weeklyCount').textContent = counts.weekly;
+            document.getElementById('monthlyCount').textContent = counts.monthly;
+            document.getElementById('yearlyCount').textContent = counts.yearly;
+
+            // Reset counts periodically
+            const now = new Date();
+            if (now.getHours() === 0 && now.getMinutes() === 0) localStorage.setItem('dailyCount', '0');
+            if (now.getDay() === 0 && now.getHours() === 0 && now.getMinutes() === 0) localStorage.setItem('weeklyCount', '0');
+            if (now.getDate() === 1 && now.getHours() === 0 && now.getMinutes() === 0) localStorage.setItem('monthlyCount', '0');
+            if (now.getMonth() === 0 && now.getDate() === 1 && now.getHours() === 0 && now.getMinutes() === 0) localStorage.setItem('yearlyCount', '0');
+        }
+
+        updateVisitorCount();
+    </script>
+</body>
+</html>
