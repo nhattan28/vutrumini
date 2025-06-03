@@ -7,9 +7,9 @@ const websites = [
     { url: "https://nhattan28.github.io/tintucCNTT/", title: "Tin tức công nghệ", desc: "Cập nhật nhanh chóng các tin tức về công nghệ thông tin trong nước và thế giới." },
     { url: "https://nhattan28.github.io/hanggia/", title: "Hàng giả", desc: "Cảnh báo và chia sẻ thông tin liên quan đến hàng giả, hàng nhái." },
     { url: "https://nhattan28.github.io/tintuctonghop/", title: "Báo tổng hợp", desc: "Tổng hợp tin tức đa lĩnh vực: xã hội, đời sống, thể thao, giải trí..." },
-    { url: "https://nhattan28.github.io/timbaihat/", title: "Tìm bài hát", desc: "Tìm tên bài hát qua lời, hỗ trợ tra cứu nhanh." }
-    { url: "https://nhattan28.github.io/timbaihat/", title: "Thời gian", desc: "Track thời gian. Không màu mè. Không thỏa hiệp. Chỉ hiệu suất." }
-
+    { url: "https://nhattan28.github.io/timbaihat/", title: "Tìm bài hát", desc: "Tìm tên bài hát qua lời, hỗ trợ tra cứu nhanh." },
+    { url: "https://nhattan28.github.io/thoigian/", title: "Thời gian", desc: "Track thời gian. Không màu mè. Không thỏa hiệp. Chỉ hiệu suất." },
+    { url: "https://nhattan28.github.io/lamdepcode/", title: "Đẹp code", desc: "Tối ưu và trình bày mã nguồn sạch, đẹp, chuẩn từng dòng."}
     
 ];
 
