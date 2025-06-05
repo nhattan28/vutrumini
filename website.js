@@ -9,8 +9,8 @@ const websites = [
     { url: "https://nhattan28.github.io/tintuctonghop/", title: "Báo tổng hợp", desc: "Tổng hợp tin tức đa lĩnh vực: xã hội, đời sống, thể thao, giải trí..." },
     { url: "https://nhattan28.github.io/timbaihat/", title: "Tìm bài hát", desc: "Tìm tên bài hát qua lời, hỗ trợ tra cứu nhanh." },
     { url: "https://nhattan28.github.io/thoigian/", title: "Thời gian", desc: "Track thời gian. Không màu mè. Không thỏa hiệp. Chỉ hiệu suất." },
-    { url: "https://nhattan28.github.io/lamdepcode/", title: "Đẹp code", desc: "Tối ưu và trình bày mã nguồn sạch, đẹp, chuẩn từng dòng."}
-    
+    { url: "https://nhattan28.github.io/lamdepcode/", title: "Đẹp code", desc: "Tối ưu và trình bày mã nguồn sạch, đẹp, chuẩn từng dòng."},
+    { url: "https://nhattan28.github.io/sukhacnhau/", title: "So sánh", desc: "So sánh giữa sự khác nhau giữa các file."}
 ];
 
 const itemsPerPage = 9;
