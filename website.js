@@ -3,7 +3,6 @@ const websites = [
     { url: "https://nhattan28.github.io/tracnghiem/", title: "Trắc nghiệm", desc: "Kiểm tra kiến thức qua các bài trắc nghiệm dựa vào file word." },
     { url: "https://nhattan28.github.io/phatvideohoathinh/", title: "Phát video hoạt hình", desc: "Trình phát video hoạt hình dành cho trẻ em và phụ huynh." },
     { url: "https://nhattan28.github.io/cuahangNhatTan/", title: "Cửa hàng Nhật Tân", desc: "Gian hàng online trưng bày và bán các sản phẩm của Nhật Tân." },
-    { url: "https://nhattan28.github.io/truyenngontinh/", title: "Truyện ngôn tình", desc: "Kho truyện ngôn tình đa dạng, nhẹ nhàng, đầy cảm xúc." },
     { url: "https://nhattan28.github.io/tintucCNTT/", title: "Tin tức công nghệ", desc: "Cập nhật nhanh chóng các tin tức về công nghệ thông tin trong nước và thế giới." },
     { url: "https://nhattan28.github.io/hanggia/", title: "Hàng giả", desc: "Cảnh báo và chia sẻ thông tin liên quan đến hàng giả, hàng nhái." },
     { url: "https://nhattan28.github.io/tintuctonghop/", title: "Báo tổng hợp", desc: "Tổng hợp tin tức đa lĩnh vực: xã hội, đời sống, thể thao, giải trí..." },
