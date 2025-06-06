@@ -25,7 +25,7 @@ const utilities = [
     { url: "https://chromewebstore.google.com/detail/just-a-clock-the-minutes/pgmgkfgcnigcopcjhilfabbdgmjmkogj?hl=vi&utm_source=ext_sidebar", title: "Just a Clock – The Minutes", desc: "Đồng hồ đơn giản hiển thị phút – phù hợp khi cần theo dõi thời gian chi tiết." },
     { url: "https://chromewebstore.google.com/detail/chatgpt-tóm-tắt-trang-web/cbgecfllfhmmnknmamkejadjmnmpfjmp?hl=vi&utm_source=ext_sidebar", title: "ChatGPT – Tóm tắt trang web", desc: "Tóm tắt nội dung web bằng AI – tiết kiệm thời gian đọc lướt." }
 ];
-const itemsPerPage = 9;
+const itemsPerPage = 12;
 let currentPage = 1;
 let filteredUtilities = [...utilities];
 
