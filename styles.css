@@ -1,194 +1,190 @@
-/* Toàn bộ giao diện chính */
-body, html {
+/* Reset và cài đặt chung */
+* {
+    box-sizing: border-box;
     margin: 0;
-    overflow-x: hidden;
-    width: 100%;
-    font-family: 'Arial', sans-serif;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    animation: backgroundCycle 32s infinite;
-    color: #333;
+    padding: 0;
 }
 
-/* Hiệu ứng đổi màu nền */
-@keyframes backgroundCycle {
-    0% { background-color: #ff6b6b; }
-    12.5% { background-color: #4ecdc4; }
-    25% { background-color: #45b7d1; }
-    37.5% { background-color: #96ceb4; }
-    50% { background-color: #ffeead; }
-    62.5% { background-color: #d4a5a5; }
-    75% { background-color: #9b59b6; }
-    87.5% { background-color: #3498db; }
-    100% { background-color: #ff6b6b; }
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(-45deg, 
+        #ffe0f0, /* hồng nhạt */
+        #fef9d7, /* vàng nhạt */
+        #d0f4de, /* xanh lá nhạt */
+        #d0ebff, /* xanh dương nhạt */
+        #e0d3f7, /* tím nhạt */
+        #fff3e0, /* cam nhạt */
+        #fbe9e7  /* đỏ nhạt */
+    );
+    background-size: 400% 400%;
+    animation: gradientBackground 20s ease infinite;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
 }
 
 header h2 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
     color: #333;
 }
 
-/* Ô tìm kiếm */
 #searchBar {
-    margin: 15px 0;
-    padding: 10px;
-    width: 80%;
-    max-width: 500px;
-    border: 2px solid #3498db;
+    width: 90%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border: 2px solid #3b82f6;
     border-radius: 25px;
-    font-size: 1em;
-    transition: all 0.3s ease;
-}
-
-#searchBar:focus {
+    font-size: 16px;
     outline: none;
-    border-color: #e74c3c;
-    box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+    transition: box-shadow 0.3s ease;
+}
+#searchBar:focus {
+    box-shadow: 0 0 8px #3b82f6;
 }
 
-/* Thanh điều hướng */
+/* Điều hướng */
 nav {
-    margin: 15px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #3498db;
+    margin-top: 20px;
     font-weight: bold;
-    margin: 0 20px;
-    transition: color 0.3s ease;
+    color: #3b82f6;
 }
 
-nav a:hover {
-    color: #e74c3c;
-}
-
-/* Phân trang */
 .pagination {
     margin-top: 10px;
 }
 
 .pagination button {
-    padding: 10px 20px;
-    margin: 0 5px;
+    padding: 8px 15px;
     border: none;
-    background: #3498db;
-    color: white;
-    border-radius: 5px;
+    border-radius: 8px;
+    margin: 0 5px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.pagination button:hover:not(:disabled) {
-    background: #e74c3c;
-    transform: translateY(-3px);
+    transition: background-color 0.3s ease;
 }
 
 .pagination button:disabled {
-    background: #ccc;
+    background-color: #ccc;
     cursor: not-allowed;
-}
-
-/* Khu vực nội dung chính */
-main {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    flex-grow: 1;
-    width: 90%;
-    overflow-x: hidden;
-}
-
-/* Thẻ nội dung */
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    max-width: 100%;
-    box-sizing: border-box;
-}
-
-.card:hover {
-    transform: translateY(-10px) rotateX(10deg) rotateY(10deg);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-.card h2 {
-    margin: 0 0 10px;
-    font-size: 1.5em;
-    color: #3498db;
-    text-align: center;
-}
-
-.card p {
-    margin: 0;
     color: #666;
 }
 
-/* Bộ đếm lượt truy cập */
-.visitor-counter {
-    text-align: center;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px;
-    border-radius: 10px;
+.pagination button:not(:disabled) {
+    background-color: #3b82f6;
+    color: white;
+}
+.pagination span {
+    font-size: 16px;
 }
 
-/* Center visitor counter */
-main:has(.visitor-counter) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: calc(100vh - 200px);
+/* Container chính */
+main#cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Thẻ chức năng */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #3b82f6;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card p {
+    color: #333;
+    font-size: 15px;
 }
 
 /* Footer */
 footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #666;
     text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive - Mobile */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2em;
+/* Nền động */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    header h2 {
+        font-size: 1.8rem;
     }
 
     #searchBar {
-        width: 90%;
+        width: 100%;
     }
 
-    main {
-        grid-template-columns: 1fr;
-        padding: 10px;
+    .card {
+        padding: 15px;
     }
 
     .pagination button {
-        padding: 8px 15px;
+        padding: 6px 10px;
     }
 }
+.petal {
+    position: fixed;
+    top: -10px;
+    pointer-events: none;
+    z-index: 9999;
+    animation-name: fall;
+    animation-timing-function: linear;
+}
 
-/* Responsive - Desktop lớn */
-@media (min-width: 1200px) {
-    main {
-        grid-template-columns: repeat(3, 1fr);
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
