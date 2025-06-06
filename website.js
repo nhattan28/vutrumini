@@ -10,7 +10,8 @@ const websites = [
     { url: "https://nhattan28.github.io/thoigian/", title: "Thời gian", desc: "Track thời gian. Không màu mè. Không thỏa hiệp. Chỉ hiệu suất." },
     { url: "https://nhattan28.github.io/lamdepcode/", title: "Đẹp code", desc: "Tối ưu và trình bày mã nguồn sạch, đẹp, chuẩn từng dòng."},
     { url: "https://nhattan28.github.io/sukhacnhau/", title: "So sánh", desc: "So sánh giữa sự khác nhau giữa các file."},
-    { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-ecp7NlqtSfyunC8MBtCII_S_mAyRYbla8k9sRm0ZU0-pdc4UDDbpZAL-vvYyAzHZEKsMSPNENpA1/pubhtml", title: "Lịch thi & danh sách thi", desc: "Hiển thị lịch thi và danh sách thi"}
+    { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-ecp7NlqtSfyunC8MBtCII_S_mAyRYbla8k9sRm0ZU0-pdc4UDDbpZAL-vvYyAzHZEKsMSPNENpA1/pubhtml", title: "Lịch thi & danh sách thi", desc: "Hiển thị lịch thi và danh sách thi"},
+    { url: "https://nhattan28.github.io/tailieu/", title: "Tài liệu", desc: "Tài liệu học và chia sẽ file."}
 ];
 
 const itemsPerPage = 9;
