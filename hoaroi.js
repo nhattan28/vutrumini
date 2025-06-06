@@ -12,7 +12,7 @@ const createPetal = () => {
 
     setTimeout(() => {
         petal.remove();
-    }, 10000); // xóa sau 10s
+    }, 5000); // xóa sau 5s
 };
 
 setInterval(createPetal, 300); // tạo hoa mỗi 300ms
