@@ -32,21 +32,35 @@ header h2 {
     font-size: 2rem;
     margin-bottom: 10px;
     font-weight: bold;
-    color: #333;
 }
 
 #searchBar {
     width: 90%;
     max-width: 400px;
     padding: 10px 15px;
-    border: 2px solid #3b82f6;
+    border: none;
     border-radius: 25px;
     font-size: 16px;
     outline: none;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    background: linear-gradient(-45deg, 
+        #ffe0f0, #fef9d7, #d0f4de, #d0ebff, #e0d3f7,
+        #fff3e0, #fbe9e7, #f3ffe3, #ffe3f1, #e3f0ff
+       
+    );
+    background-size: 400% 400%;
+    animation: gradientBackground 20s ease infinite;
+    color: #333;
 }
-#searchBar:focus {
-    box-shadow: 0 0 8px #3b82f6;
+
+/* Khi rê chuột vào thanh tìm kiếm */
+#searchBar:hover {
+    background: linear-gradient(-45deg,
+        #fff6d1, #e6e3ff, #ffdede, #e0fff9, #fff1e6,
+        #ffe7cc, #ffd6e0, #f9e2ff, #fef9e7, #e0f7fa,
+        #f0f4c3, #d7f9f1, #e0eafc, #f3d1f4, #fff5e4
+    );
+    color: white;
 }
 
 /* Điều hướng */
@@ -193,5 +207,40 @@ footer {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+a {
+    text-decoration: none;     /* ❌ Bỏ gạch chân */
+    color: red;                /* 🔴 Mặc định: đỏ */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: pink;               /* 💗 Khi rê chuột: hồng */
+}
+
+a:active {
+    color: purple;             /* 💜 Khi bấm: tím */
+}
+.rainbow-text {
+    font-size: 2 rem;
+    font-weight: bold;
+    background: linear-gradient(
+        90deg,
+        red, orange, yellow, green, blue, indigo, violet
+    );
+    background-size: 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 4s linear infinite;
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
     }
 }
