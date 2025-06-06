@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nhật Tân</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -15,41 +15,15 @@
             <a href="thongke.html">Thống Kê</a>
             <div class="pagination">
                 <button id="prevPage" disabled>Trang trước</button>
-                <span id="pageInfo">Trang 1</span>
+                <span id="pageInfo"></span>
                 <button id="nextPage">Trang sau</button>
             </div>
         </nav>
     </header>
-
-    <main id="cardContainer">
-    </main>
-
+    <main id="cardContainer"></main>
     <footer>
         <p>Made with ❤️ by Nhật Tân • © 2025</p>
     </footer>
-
-    <script>
-        let currentPage = 1;
-        const pageInfo = document.getElementById("pageInfo");
-        const prevBtn = document.getElementById("prevPage");
-        const nextBtn = document.getElementById("nextPage");
-
-        prevBtn.addEventListener("click", () => {
-            if (currentPage > 1) {
-                currentPage--;
-                updatePage();
-            }
-        });
-
-        nextBtn.addEventListener("click", () => {
-            currentPage++;
-            updatePage();
-        });
-
-        function updatePage() {
-            pageInfo.textContent = "Trang " + currentPage;
-            prevBtn.disabled = currentPage === 1;
-        }
-    </script>
+    <script src="website.js"></script>
 </body>
 </html>
