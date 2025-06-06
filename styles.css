@@ -105,6 +105,7 @@ main#cardContainer {
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    text-align: center; /* ✅ thêm dòng này */
 }
 
 .card:hover {
