@@ -1,5 +1,8 @@
-body {
+/* Toàn bộ giao diện chính */
+body, html {
     margin: 0;
+    overflow-x: hidden;
+    width: 100%;
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -8,6 +11,7 @@ body {
     color: #333;
 }
 
+/* Hiệu ứng đổi màu nền */
 @keyframes backgroundCycle {
     0% { background-color: #ff6b6b; }
     12.5% { background-color: #4ecdc4; }
@@ -20,6 +24,7 @@ body {
     100% { background-color: #ff6b6b; }
 }
 
+/* Header */
 header {
     text-align: center;
     padding: 20px;
@@ -33,6 +38,7 @@ header h2 {
     color: #333;
 }
 
+/* Ô tìm kiếm */
 #searchBar {
     margin: 15px 0;
     padding: 10px;
@@ -50,6 +56,7 @@ header h2 {
     box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
 }
 
+/* Thanh điều hướng */
 nav {
     margin: 15px 0;
 }
@@ -66,6 +73,7 @@ nav a:hover {
     color: #e74c3c;
 }
 
+/* Phân trang */
 .pagination {
     margin-top: 10px;
 }
@@ -91,6 +99,7 @@ nav a:hover {
     cursor: not-allowed;
 }
 
+/* Khu vực nội dung chính */
 main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -99,8 +108,11 @@ main {
     max-width: 1400px;
     margin: 0 auto;
     flex-grow: 1;
+    width: 100%;
+    overflow-x: hidden;
 }
 
+/* Thẻ nội dung */
 .card {
     background: white;
     border-radius: 10px;
@@ -108,6 +120,8 @@ main {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .card:hover {
@@ -119,7 +133,7 @@ main {
     margin: 0 0 10px;
     font-size: 1.5em;
     color: #3498db;
-    text-align: center; /* Center the card titles */
+    text-align: center;
 }
 
 .card p {
@@ -127,22 +141,24 @@ main {
     color: #666;
 }
 
+/* Bộ đếm lượt truy cập */
 .visitor-counter {
     text-align: center;
     padding: 20px;
-    margin: 20px auto; /* Center horizontally with auto margins */
+    margin: 20px auto;
     max-width: 600px;
     border-radius: 10px;
 }
 
-/* Center the visitor-counter vertically within the main section */
+/* Center visitor counter */
 main:has(.visitor-counter) {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 200px); /* Adjust for header and footer heights */
+    min-height: calc(100vh - 200px);
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
@@ -150,6 +166,7 @@ footer {
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Responsive - Mobile */
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -169,6 +186,7 @@ footer {
     }
 }
 
+/* Responsive - Desktop lớn */
 @media (min-width: 1200px) {
     main {
         grid-template-columns: repeat(3, 1fr);
