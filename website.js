@@ -14,7 +14,7 @@ const websites = [
     { url: "https://nhattan28.github.io/tailieu/", title: "Tài liệu", desc: "Tài liệu học và chia sẽ file."}
 ];
 
-const itemsPerPage = 9;
+const itemsPerPage = 12;
 let currentPage = 1;
 let filteredWebsites = [...websites];
 
