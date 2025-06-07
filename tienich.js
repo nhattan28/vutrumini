@@ -1,5 +1,5 @@
 const utilities =
-[
+  [
     {
         url: "https://luvvoice.com/vn", 
         title: "Chuyển văn bản thành giọng nói",
@@ -123,7 +123,9 @@ const utilities =
     {
         url: "https://chromewebstore.google.com/detail/chatgpt-tóm-tắt-trang-web/cbgecfllfhmmnknmamkejadjmnmpfjmp?hl=vi&utm_source=ext_sidebar",
         title: "ChatGPT – Tóm tắt trang web",
-        desc: "Tóm tắt nội dung web bằng AI – tiết kiệm thời gian đọc lướt." }
+        desc: "Tóm tắt nội dung web bằng AI – tiết kiệm thời gian đọc lướt."
+      
+    },
     {
         url: "https://mydtu.duytan.edu.vn/Signin.aspx",
         title: "Mydtu",
