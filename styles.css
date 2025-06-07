@@ -76,27 +76,35 @@ nav {
 
 .pagination button {
     padding: 8px 15px;
-    border: none;
+    border: 2px solid transparent;
     border-radius: 8px;
     margin: 0 5px;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    color: black;
+    background: linear-gradient(-45deg, 
+        #ffe0f0, #fef9d7, #d0f4de, #d0ebff, #e0d3f7,
+        #fff3e0, #fbe9e7, #d7f9f1, #f5d0c5, #e4e4ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: box-shadow 0.2s ease, border-color 0.3s ease;
+}
+
+.pagination button:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    border-color: white;
 }
 
 .pagination button:disabled {
-    background-color: #ccc;
     cursor: not-allowed;
-    color: #666;
-}
-
-.pagination button:not(:disabled) {
-    background-color: #3b82f6;
-    color: white;
-}
-.pagination span {
-    font-size: 16px;
+    color: #aaa;
+    filter: grayscale(60%);
+    animation: none;
+    background: #ddd;
+    border-color: #ccc;
+    box-shadow: none;
 }
 
 /* Container chính */
