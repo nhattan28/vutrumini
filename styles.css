@@ -252,3 +252,47 @@ a:active {
         background-position: 100% 50%;
     }
 }
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.75);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.modal.show {
+  display: flex;
+}
+.modal iframe {
+  width: 90vw;
+  height: 80vh;
+  border: none;
+  border-radius: 10px;
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+.external-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 16px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1001;
+}
+.external-button:hover {
+  background: #3399ff;
+}
