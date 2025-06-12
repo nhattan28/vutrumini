@@ -13,7 +13,9 @@ const websites = [
     { url: "https://nhattan28.github.io/sukhacnhau/", title: "So sánh", desc: "So sánh giữa sự khác nhau giữa các file."},
     { url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-ecp7NlqtSfyunC8MBtCII_S_mAyRYbla8k9sRm0ZU0-pdc4UDDbpZAL-vvYyAzHZEKsMSPNENpA1/pubhtml", title: "Lịch thi & danh sách thi", desc: "Hiển thị lịch thi và danh sách thi"},
     { url: "https://nhattan28.github.io/tailieu/", title: "Tài liệu", desc: "Tài liệu học và chia sẽ file."},
-    { url: "https://nhattan28.github.io/taohoadon/", title: "Tạo hóa đơn", desc: "Tạo hóa đơn"}
+    { url: "https://nhattan28.github.io/taohoadon/", title: "Tạo hóa đơn", desc: "Tạo hóa đơn"},
+    { url: "https://nhattan28.github.io/tinhthanh/", title: "Tỉnh thành", desc: "Tra cứu tỉnh thành sau sát nhập"}
+
 
 ];
 
