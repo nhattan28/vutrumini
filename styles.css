@@ -10,8 +10,6 @@ body {
     background: linear-gradient(-45deg, 
         #ffe0f0,  #fef9d7,  #d0f4de,  #d0ebff,  #e0d3f7,
         #fff3e0,  #fbe9e7,  #d7f9f1,  #f5d0c5,  #e4e4ff  
-
-
     );
     background-size: 400% 400%;
     animation: gradientBackground 20s ease infinite;
@@ -46,7 +44,6 @@ header h2 {
     background: linear-gradient(-45deg, 
         #ffe0f0, #fef9d7, #d0f4de, #d0ebff, #e0d3f7,
         #fff3e0, #fbe9e7, #f3ffe3, #ffe3f1, #e3f0ff
-       
     );
     background-size: 400% 400%;
     animation: gradientBackground 20s ease infinite;
@@ -118,7 +115,7 @@ main#cardContainer {
 
 /* Thẻ chức năng */
 .card {
- background: linear-gradient(-45deg, 
+    background: linear-gradient(-45deg, 
         #ffe0f0, #fef9d7, #d0f4de, #d0ebff, #e0d3f7,
         #fff3e0, #fbe9e7, #f3ffe3, #ffe3f1, #e3f0ff,
         #fff6d1, #e6e3ff, #ffdede, #e0fff9, #fff1e6,
@@ -127,7 +124,6 @@ main#cardContainer {
     );
     background-size: 400% 400%;
     animation: gradientBackground 20s ease infinite;
-
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -192,6 +188,7 @@ footer {
         padding: 6px 10px;
     }
 }
+
 .petal {
     position: fixed;
     top: -10px;
@@ -206,33 +203,24 @@ footer {
         transform: translateY(100vh) rotate(360deg);
     }
 }
-@keyframes gradientBackground {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
+
 a {
-    text-decoration: none;     /* ❌ Bỏ gạch chân */
-    color: red;                /* 🔴 Mặc định: đỏ */
+    text-decoration: none;
+    color: red;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: pink;               /* 💗 Khi rê chuột: hồng */
+    color: pink;
 }
 
 a:active {
-    color: purple;             /* 💜 Khi bấm: tím */
+    color: purple;
 }
+
 .rainbow-text {
-    font-size: 2 rem;
+    font-size: 2rem;
     font-weight: bold;
     background: linear-gradient(
         90deg,
@@ -252,47 +240,65 @@ a:active {
         background-position: 100% 50%;
     }
 }
+
 .modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.75);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    padding: 40px 20px; /* Thêm padding để nút không sát cạnh */
 }
+
 .modal.show {
-  display: flex;
+    display: flex;
 }
+
 .modal iframe {
-  width: 90vw;
-  height: 80vh;
-  border: none;
-  border-radius: 10px;
+    width: 95vw;
+    height: 90vh;
+    max-width: 100%;
+    max-height: 100%;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
+
 .modal-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
+    position: absolute;
+    top: 5px; /* Đặt cao hơn để tránh che iframe */
+    right: 5px; /* Đặt xa hơn để không sát cạnh */
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    z-index: 1001; /* Đảm bảo nằm trên iframe */
+    padding: 5px 10px;
+    border-radius: 50%;
 }
+.modal-close:hover {
+    background: red;
+}
+
 .external-button {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  padding: 10px 16px;
-  background: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 14px;
-  cursor: pointer;
-  z-index: 1001;
+    position: absolute;
+    bottom: 10px; /* Đặt thấp hơn để tránh che iframe */
+    right: 10px; /* Đặt xa hơn để không sát cạnh */
+    padding: 10px 16px;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1001; /* Đảm bảo nằm trên iframe */
+    background: white;
 }
+
 .external-button:hover {
-  background: #3399ff;
+    background: rgb(96, 243, 123);
 }
