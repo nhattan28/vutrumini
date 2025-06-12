@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nhật Tân</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhật Tân</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h2 class="rainbow-text">𝓦𝓮𝓫𝓼𝓲𝓽𝓮</h2>
-        <input type="text" id="searchBar" placeholder="Tìm kiếm">
-        <nav>
-            <a href="tienich.html">Tiện Ích</a>
-            <div class="pagination">
-                <button id="prevPage" disabled>Trang trước</button>
-                <span id="pageInfo"></span>
-                <button id="nextPage">Trang sau</button>
-            </div>
-        </nav>
-    </header>
-    <main id="cardContainer"></main>
-    <footer>
-        <p>Made with ❤️ by Nhật Tân • © 2025</p>
-    </footer>
-    <script src="website.js"></script>
-    <script src="hoaroi.js"></script>
+  <header>
+    <h2 class="rainbow-text">Website</h2>
+    <input type="text" id="searchBar" placeholder="Tìm kiếm">
+    <nav>
+      <a href="tienich.html">Tiện Ích</a>
+      <div class="pagination">
+        <button id="prevPage" disabled>Trang trước</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Trang sau</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="cardContainer"></main>
+
+  <!-- ✅ MODAL POPUP -->
+  <div class="modal" id="modal">
+    <span class="modal-close" onclick="closeModal()">×</span>
+    <iframe id="modalFrame" title="Xem tiện ích"></iframe>
+    <button class="external-button" onclick="openExternal()">Mở trang</button>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Nhật Tân • © 2025</p>
+  </footer>
+
+  <script src="website.js"></script>
+  <script src="hoaroi.js"></script>
 </body>
 </html>
