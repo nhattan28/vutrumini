@@ -14,7 +14,7 @@ const createPetal = () => {
     petal.style.animationDuration = 5 + Math.random() * 5 + 's';
     petal.style.opacity = Math.random();
     petal.style.fontSize = Math.random() * 10 + 15 + 'px';
-    petal.style.zIndex = 9999;
+    petal.style.zIndex = 1;
     petal.style.pointerEvents = 'none';
     petal.style.animationName = 'fall';
     petal.style.animationTimingFunction = 'linear';
