@@ -20,64 +20,72 @@ const websites = [
 const itemsPerPage = 12;
 let currentPage = 1;
 let filteredWebsites = [...websites];
+let currentURL = '';
 
 function normalizeString(str) {
-    return str
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "")
-        .toLowerCase();
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
 function displayCards(page) {
-    const container = document.getElementById('cardContainer');
-    container.innerHTML = '';
-    const start = (page - 1) * itemsPerPage;
-    const end = start + itemsPerPage;
-    const pageItems = filteredWebsites.slice(start, end);
+  const container = document.getElementById('cardContainer');
+  container.innerHTML = '';
+  const start = (page - 1) * itemsPerPage;
+  const end = start + itemsPerPage;
+  const pageItems = filteredWebsites.slice(start, end);
 
-    pageItems.forEach(website => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <h2>${website.title}</h2>
-            <p>${website.desc}</p>
-        `;
-        card.onclick = () => window.open(website.url, '_blank');
-        container.appendChild(card);
-    });
+  pageItems.forEach(website => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<h2>${website.title}</h2><p>${website.desc}</p>`;
+    card.onclick = () => {
+      currentURL = website.url;
+      document.getElementById("modalFrame").src = website.url;
+      document.getElementById("modal").classList.add("show");
+    };
+    container.appendChild(card);
+  });
 
-    updatePagination();
+  updatePagination();
 }
 
 function updatePagination() {
-    const totalPages = Math.ceil(filteredWebsites.length / itemsPerPage);
-    document.getElementById('pageInfo').textContent = `Trang ${currentPage} / ${totalPages}`;
-    document.getElementById('prevPage').disabled = currentPage === 1;
-    document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
+  const totalPages = Math.ceil(filteredWebsites.length / itemsPerPage);
+  document.getElementById('pageInfo').textContent = `Trang ${currentPage} / ${totalPages}`;
+  document.getElementById('prevPage').disabled = currentPage === 1;
+  document.getElementById('nextPage').disabled = currentPage === totalPages || totalPages === 0;
 }
 
 function searchCards() {
-    const query = normalizeString(document.getElementById('searchBar').value);
-    filteredWebsites = websites.filter(website =>
-        normalizeString(website.title).includes(query) ||
-        normalizeString(website.desc).includes(query)
-    );
-    currentPage = 1;
-    displayCards(currentPage);
+  const query = normalizeString(document.getElementById('searchBar').value);
+  filteredWebsites = websites.filter(website =>
+    normalizeString(website.title).includes(query) ||
+    normalizeString(website.desc).includes(query)
+  );
+  currentPage = 1;
+  displayCards(currentPage);
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.remove("show");
+  document.getElementById("modalFrame").src = '';
+}
+
+function openExternal() {
+  if (currentURL) window.open(currentURL, '_blank');
 }
 
 document.getElementById('searchBar').addEventListener('input', searchCards);
 document.getElementById('prevPage').addEventListener('click', () => {
-    if (currentPage > 1) {
-        currentPage--;
-        displayCards(currentPage);
-    }
+  if (currentPage > 1) {
+    currentPage--;
+    displayCards(currentPage);
+  }
 });
 document.getElementById('nextPage').addEventListener('click', () => {
-    if (currentPage < Math.ceil(filteredWebsites.length / itemsPerPage)) {
-        currentPage++;
-        displayCards(currentPage);
-    }
+  if (currentPage < Math.ceil(filteredWebsites.length / itemsPerPage)) {
+    currentPage++;
+    displayCards(currentPage);
+  }
 });
 
 displayCards(currentPage);
