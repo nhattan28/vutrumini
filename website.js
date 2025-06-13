@@ -17,8 +17,8 @@ const websites = [
     { url: "https://nhattan28.github.io/tailieu/", title: "Tài liệu", desc: "Tài liệu học và chia sẽ file."},
     { url: "https://nhattan28.github.io/taohoadon/", title: "Tạo hóa đơn", desc: "Tạo hóa đơn"},
     { url: "https://nhattan28.github.io/tinhthanh/", title: "Tỉnh thành", desc: "Tra cứu tỉnh thành sau sát nhập"},
-    { url: "https://nhattan28.github.io/taifile/", title: "Tải file", desc: "Tải file về google drive"}
-
+    { url: "https://nhattan28.github.io/taifile/", title: "Tải file", desc: "Tải file về google drive"},
+    { url: "https://nhattan28.github.io/luutam7ngay/", title: "Lưu tạm", desc: "Lưu tạm 7 ngày"}
 
 ];
 
