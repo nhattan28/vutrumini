@@ -1,5 +1,7 @@
 const websites = [
-    { url: "https://nhattan28.github.io/gianongsan/", title: "Nông sản", desc: "Trang cập nhật giá nông sản hàng ngày, phục vụ nông dân." },
+    { url: "https://giacaphe.com/gia-ca-phe-dak-nong/", title: "Giá cà phê", desc: "Cập nhật giá cà phê"},
+    { url: "https://giacaphe.com/gia-tieu-hom-nay/", title: "Giá tiêu", desc: "Cập nhật giá tiêu"},
+    { url: "https://nhattan28.github.io/gianongsan/", title: "Thông tin", desc: "Cập nhật xăng dầu, thời tiết." },
     { url: "https://nhattan28.github.io/tracnghiem/", title: "Trắc nghiệm", desc: "Kiểm tra kiến thức qua các bài trắc nghiệm dựa vào file word." },
     { url: "https://nhattan28.github.io/Camera_Da_Nang/", title: "Camera", desc: "Camera trực tiếp Đà Nẵng"},
     { url: "https://nhattan28.github.io/phatvideohoathinh/", title: "Phát video hoạt hình", desc: "Trình phát video hoạt hình dành cho trẻ em và phụ huynh." },
